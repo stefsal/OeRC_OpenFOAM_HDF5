@@ -11,7 +11,7 @@ This is required in order to introduce the apprpriate libraries and include file
 
 
 The file  
-http:://github.com/stefsal/OeRC_OpenFOAM_HDF5/stefsal/OeRC_OpenFOAM_HDF5/instructions_and_options/src_OpenFoam_Make_options  
+http://github.com/stefsal/OeRC_OpenFOAM_HDF5/stefsal/OeRC_OpenFOAM_HDF5/instructions_and_options/src_OpenFoam_Make_options  
 contains an example of the option file for some specific system.
 
 
