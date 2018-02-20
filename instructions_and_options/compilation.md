@@ -30,11 +30,11 @@ All the standard OF scripts can then be used for compilation.
 Please notice that if these are the only changes required and if there are **no** unresolved dependencies, you could use the following commands:
 
 ```
-cloud cuckoo land
+  wmake libso ~/OpenFOAM/OpenFOAM-4.1/src/OpenFOAM
+  cd  ~/OpenFOAM/OpenFOAM-4.1/applications
+  Allwmake -j8
 ```
 
+This will make sure that only the changed contents in db/ will be compiled (of course, with all their dependencies), then the Allwmake command (script) will link the executable.
 
-
-1. Pippo
-1. PLuto
-1. Paperino
+OpenFOAM is npw ready to use.
