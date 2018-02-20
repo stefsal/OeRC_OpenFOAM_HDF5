@@ -10,8 +10,8 @@ This is required in order to introduce the apprpriate libraries and include file
 1. HDF5 include files and libraries.
 
 
-The file
-stefsal/OeRC_OpenFOAM_HDF5/stefsal/OeRC_OpenFOAM_HDF5/instructions_and_options/src_OpenFoam_Make_options
+The file  
+stefsal/OeRC_OpenFOAM_HDF5/stefsal/OeRC_OpenFOAM_HDF5/instructions_and_options/src_OpenFoam_Make_options  
 contains an example of the option file for some specific system.
 
 
