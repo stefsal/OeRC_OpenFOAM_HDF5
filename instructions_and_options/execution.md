@@ -2,7 +2,7 @@
 
 This document only relates to the execution of this version of OpenFOAM. For further details, the reasons for using HDF5 etc. we refer the user to the document [technical\_information](https://github.com/stefsal/OeRC_OpenFOAM_HDF5/blob/master/technical_information.md) in this repository.
 
-[technical\_information](../blob/master/technical_information.md)
+[technical\_information](../master/technical_information.md)
 
 ## Execution Modes
 
