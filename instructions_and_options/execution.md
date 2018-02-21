@@ -48,7 +48,7 @@ table below gives the number of files created and applies it to the case _P=1000
 
 Standard OpenFOAM | HDF5 no bunches | HDF5 with _B_ bunches
 ----- | ----- | ------
-_T_\*_P_\*_F_ | _T_ | _T_\*_B_
+_T_\*_P_\*_F_ | _T_ | _T_\*_P_/_B_
 10,000,000 | 100 | 10,000
 
 Clearly, using standard OpenFOAM would not be feasiblefor this problem as the number of files created would probably exceed the availble capabilities of the HPC system. Using HDF5 would be possible either with or without bunching.
@@ -58,7 +58,7 @@ The environment variable defininfg bunching is:
 OF_OUTPUT_H5_BUNCHSIZE |  Description | Status
 -------------- | ------------ | ------
 <= 1 | No bunching | available
-> 1 | Use HDF5 bunching with the given size | available
-noyt defined | no bunching | available
+\> 1 | Use HDF5 bunching with the given size | available
+not defined | no bunching | available
 
 If standard OpenFOAM is used, then theis environment variable is ignored.
