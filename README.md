@@ -14,5 +14,8 @@
   * [__compilation.md__](https://github.com/stefsal/OeRC_OpenFOAM_HDF5/blob/master/instructions_and_options/compilation.md): instructions to compile the version of OpenFOAM
   * [__execution.md__](https://github.com/stefsal/OeRC_OpenFOAM_HDF5/blob/master/instructions_and_options/execution.md): instructions to compile theexecute this version of OpenFOAM
 
+* [__example__](https://github.com/stefsal/OeRC_OpenFOAM_HDF5/tree/master/example)  
+  * all sources required to create the OpenFOAM version with HDF5 outputAn HDF5 file produced at a time dump from an OpenFOAM run, and two PDF files showing its structure and attributes.
+
 
 *More content to be added.*
