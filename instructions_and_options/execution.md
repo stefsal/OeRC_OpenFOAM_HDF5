@@ -2,8 +2,6 @@
 
 This document only relates to the execution of this version of OpenFOAM. For further details, the reasons for using HDF5 etc. we refer the user to the document [technical\_information](https://github.com/stefsal/OeRC_OpenFOAM_HDF5/blob/master/technical_information.md) in this repository.
 
-[technical\_information](../technical_information.md)
-
 ## Execution Modes
 
 For ease of editing (restart) internal and boundary values are now output in separate files.  The reason is that the interior values set could be very large and, in any case, far larger than the boundary values. Current editing of standard OpenFOAM files can be awkward and very time consuming.  The interior and boundary values files can be trivially concatenated: a Python simple code is provided to do so.
@@ -44,7 +42,23 @@ __OF\_OUTPUT\_H5__ |  Description | Status
 1 | both OpenFoam files and HDF5 | _to be implemented_
 not set | Use standard OpenFOAM | available
 
-The second environment variable allows _bunching_ the output from groups of proceses. 
+The second environment variable allows _bunching_ the output from groups of processes. This can be useful for very large numbers of processes. the processes are divided into  bunches, an HDF5 file being created for each time and each bunch.
+if _P_ is the number of processes, _T_ the number of time dumps required, _F_ the number of files for each process and each time dump, _B_ the bunch size, the 
+table below gives the number of files created and applies it to the case _P=10000_, _T=100_, _F=10_, _B=100_
+Standard OpenFOAM | HDF5 no bunches | HDF5 with _B_ bunches
 
+----- | ----- | ------
+_T_\*_P_\*_F_ | _T_ | _T_\*_B_
+10,000,000 | 100 | 10,000
 
-OF_OUTPUT_H5_BUNCHSIZE
+Clearly, using standard OpenFOAM would not be feasiblefor this problem as the number of files created would probably exceed the availble capabilities of the HPC system. Using HDF5 would be possible either with or without bunching.
+
+The environment variable defininfg bunching is:
+
+OF_OUTPUT_H5_BUNCHSIZE |  Description | Status
+-------------- | ------------ | ------
+<= 1 | No bunching | available
+> 1 | Use HDF5 bunching with the given size | available
+noyt defined | no bunching | available
+
+If standard OpenFOAM is used, then theis environment variable is ignored.
