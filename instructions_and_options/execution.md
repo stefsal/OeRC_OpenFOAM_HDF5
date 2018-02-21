@@ -48,7 +48,7 @@ If _P_, _T_, _F_ are the number of processes, of time dumps required, of files f
 table below gives the number of files created and applies it to the case _P=10000_, _T=100_, _F=10_, _B=100_
 
 Standard OpenFOAM | HDF5 no bunches | HDF5 with _B_ bunches
------ | ----- | ------
+|:-----:|:-----:|:------:|
 _T_\*_P_\*_F_ | _T_ | _T_\*_P_/_B_
 10,000,000 | 100 | 10,000
 
