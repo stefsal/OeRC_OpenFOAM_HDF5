@@ -1,5 +1,9 @@
 # Execution
 
+This document only relates to the execution of this version of OpenFOAM. For further details, the reasons for using HDF5 etc. we refer the user to the document [technical\_information](https://github.com/stefsal/OeRC_OpenFOAM_HDF5/blob/master/technical_information.md) in this repository.
+
+[technical\_information](../blob/master/technical_information.md)
+
 ## Execution Modes
 
 For ease of editing (restart) internal and boundary values are now output in separate files.  The reason is that the interior values set could be very large and, in any case, far larger than the boundary values. Current editing of standard OpenFOAM files can be awkward and very time consuming.  The interior and boundary values files can be trivially concatenated: a Python simple code is provided to do so.
@@ -37,7 +41,7 @@ __OF\_OUTPUT\_H5__ |  Description | Status
 -------------- | ------------ | ------
 0 | Use standard OpenFOAM files | available
 2 | Use HDF5 | available
-1 | both OpenFoam files and HDF5 | _to be implmented_
+1 | both OpenFoam files and HDF5 | _to be implemented_
 not set | Use standard OpenFOAM | available
 
 The second environment variable allows _bunching_ the output from groups of proceses. 
