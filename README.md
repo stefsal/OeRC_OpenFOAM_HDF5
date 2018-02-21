@@ -10,6 +10,6 @@
 
 * instructions_and_options:
   *  __src\_OpenFoam\_Make\_options__: The option file src/OpenFoam/Make/options (to be tailored to your particular system)
-  * _c_ompilation.md__: instructions to compile the version of OpenFOAM
+  * __compilation.md__: instructions to compile the version of OpenFOAM
 
 *More content to be added.*
