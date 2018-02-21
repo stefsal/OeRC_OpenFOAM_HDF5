@@ -58,7 +58,7 @@ The environment variable defininfg bunching is:
 OF_OUTPUT_H5_BUNCHSIZE |  Description | Status
 -------------- | ------------ | ------
 <= 1 | No bunching | available
-\> 1 | Use HDF5 bunching with the given size | available
+\>1 | Use HDF5 bunching with the given size | available
 not defined | no bunching | available
 
 If standard OpenFOAM is used, then theis environment variable is ignored.
