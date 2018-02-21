@@ -14,9 +14,4 @@
   * [__compilation.md__](https://github.com/stefsal/OeRC_OpenFOAM_HDF5/blob/master/instructions_and_options/compilation.md): instructions to compile the version of OpenFOAM
 
 
-https://github.com/stefsal/OeRC_OpenFOAM_HDF5
-
-https://github.com/stefsal/OeRC_OpenFOAM_HDF5/instructions_and_options/compilation.md
-
-
 *More content to be added.*
