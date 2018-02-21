@@ -15,4 +15,7 @@
 
 https://github.com/stefsal/OeRC_OpenFOAM_HDF5
 
+https://github.com/stefsal/OeRC_OpenFOAM_HDF5/instructions_and_options/compilation.md
+
+
 *More content to be added.*
