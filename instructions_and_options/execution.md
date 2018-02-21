@@ -36,7 +36,7 @@ __The user must make sure that the environment variables are set for all process
 Two environment variables can be used.  The first defines whether HDF5 is used or standard OpenFOAM:
 
 | __OF\_OUTPUT\_H5__ |  Description | Status
-|: -------------- :| ------------ | ------
+|:--------------:| ------------ | ------
 | 0 | Use standard OpenFOAM files | available
 | 2 | Use HDF5 | available
 | 1 | both OpenFoam files and HDF5 | _to be implemented_
