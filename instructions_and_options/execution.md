@@ -8,7 +8,9 @@ This version of OpenFOAm allows to output data to:
 
 * standard OpenFOAM files
 * HDF5 files
-* both standard OpenFOAM files and HDF5 files (not yet impolemented)
+* both standard OpenFOAM files and HDF5 files (not yet implemented)
+
+## Output structure
 
 Notice that an HDF5 file is not necessarily a file in the normal sense: users can access it as a normal file, through the appropriate HDF5 APIs, but it consists of anumber of "stprage units", called datasets.  Datasets can be collected in groups, and hierarchies of groups can be defined.
 
@@ -18,24 +20,27 @@ In the case of this version of OpenFOAM, the following has been adopted:
 1. The contents of the datasets are byte-identical to the contents of the corresponding OpenFOAM files.
 1. Each HDF5 file name includes the time of the dump.
 
-This allows time du ps to be removed easily and cleanly by just deleteing the appropriate hdf5 file.
+This allows time dumps to be removed easily and cleanly by just deleteing the appropriate hdf5 file.
 
 Notice that if datasets were to be removed from an HDF5 file, reclaiming free space is far from trivial, requiring a full HDF5 file rewrite. The same applies to other large parallel storage systems.  That is the reason to invert the order processor/time dump from the original OpenfFOAM structure.
 
+## Execution and User's Options (via Environment Variables)
+
 Once this version of OpenFOAM has been compiled, the user executes it as ihe/she always did, no --changes whatsoever__.  If the user decided to run OpenFOAM without employing the HDF5 facilities, then this version would have the standard OpenFOAM behaviour.
 
-For reasons discussed [elsewhere](https://github.com/stefsal/OeRC_OpenFOAM_HDF5/blob/master/technical_information.md),the user can determine OpenFOAM output byu the environment variable __OF\_OUTPUT\_H5__:
+For reasons discussed [elsewhere](https://github.com/stefsal/OeRC_OpenFOAM_HDF5/blob/master/technical_information.md),the user can determine OpenFOAM output by means of environment variables. 
+__The user must make sure that the environment variables are set for all processes.__ The ways to do so vary may be local to the specific HPC system, scheduler etc. and we cannot provide here specific information
 
-OF\_OUTPUT\_H5 |  Description
--------------- | ------------
-0 | Use standard OpenFOAM files
-2 | Use HDF5
- 
+Two environment variables can be used.  The first defines whether HDF5 is used or standard OpenFOAM:
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+__OF\_OUTPUT\_H5__ |  Description | Status
+-------------- | ------------ | ------
+0 | Use standard OpenFOAM files | available
+2 | Use HDF5 | available
+1 | both OpenFoam files and HDF5 | _to be implmented_
+not set | Use standard OpenFOAM | available
+
+The second environment variable allows _bunching_ the output from groups of proceses. 
 
 
 OF_OUTPUT_H5_BUNCHSIZE
