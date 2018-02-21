@@ -12,4 +12,7 @@
   *  __src\_OpenFoam\_Make\_options__: The option file src/OpenFoam/Make/options (to be tailored to your particular system)
   * __compilation.md__: instructions to compile the version of OpenFOAM
 
+
+https://github.com/stefsal/OeRC_OpenFOAM_HDF5
+
 *More content to be added.*
