@@ -35,12 +35,12 @@ __The user must make sure that the environment variables are set for all process
 
 Two environment variables can be used.  The first defines whether HDF5 is used or standard OpenFOAM:
 
-|: __OF\_OUTPUT\_H5__ :|  Description | Status
--------------- | ------------ | ------
-|: 0 :| Use standard OpenFOAM files | available
-|: 2 :| Use HDF5 | available
-|: 1 :| both OpenFoam files and HDF5 | _to be implemented_
-|: not set :| Use standard OpenFOAM | available
+| __OF\_OUTPUT\_H5__ |  Description | Status
+|: -------------- :| ------------ | ------
+| 0 | Use standard OpenFOAM files | available
+| 2 | Use HDF5 | available
+| 1 | both OpenFoam files and HDF5 | _to be implemented_
+| not set | Use standard OpenFOAM | available
 
 The second environment variable allows _bunching_ the output from groups of processes. This can be useful for very large numbers of processes. the processes are divided into  bunches, an HDF5 file being created for each time and each bunch.
 
