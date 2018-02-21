@@ -47,7 +47,7 @@ The second environment variable allows _bunching_ the output from groups of proc
 If _P_, _T_, _F_ are the number of processes, of time dumps required, of files for each process and each time dump, respectively, and _B_ is the bunch size, the 
 table below gives the number of files created and applies it to the case _P=10000_, _T=100_, _F=10_, _B=100_
 
-Standard OpenFOAM | HDF5 no bunches | HDF5 with _B_ bunches
+Standard OpenFOAM | HDF5 no bunches | HDF5 with bunches
 |:-----:|:-----:|:------:|
 _T_\*_P_\*_F_ | _T_ | _T_\*_P_/_B_
 10,000,000 | 100 | 10,000
@@ -57,7 +57,7 @@ Clearly, using standard OpenFOAM would not be feasiblefor this problem as the nu
 The environment variable defining bunching is:
 
 OF\_OUTPUT_H5\_BUNCHSIZE |  Description | Status
--------------- | ------------ | ------
+|:--------------:|:------------|:------:|
 <= 1 | No bunching | available
 \>1 | Use HDF5 bunching with the given size | available
 not defined | no bunching | available
