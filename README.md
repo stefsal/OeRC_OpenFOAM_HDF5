@@ -12,6 +12,7 @@
 * [__instructions_and_options__](https://github.com/stefsal/OeRC_OpenFOAM_HDF5/tree/master/instructions_and_options)  
   *  [__src\_OpenFoam\_Make\_options__](https://github.com/stefsal/OeRC_OpenFOAM_HDF5/blob/master/instructions_and_options/src_OpenFoam_Make_options): The option file src/OpenFoam/Make/options (to be tailored to your particular system)
   * [__compilation.md__](https://github.com/stefsal/OeRC_OpenFOAM_HDF5/blob/master/instructions_and_options/compilation.md): instructions to compile the version of OpenFOAM
+* [__execution.md__](https://github.com/stefsal/OeRC_OpenFOAM_HDF5/blob/master/instructions_and_options/execution.md): instructions to compile theexecute this version of OpenFOAM
 
 
 *More content to be added.*
