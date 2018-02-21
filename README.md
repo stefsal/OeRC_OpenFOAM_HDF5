@@ -1,4 +1,4 @@
-# CompilationREADME file
+# README file
 
 ## Contents of the repository
 
