@@ -43,7 +43,8 @@ __OF\_OUTPUT\_H5__ |  Description | Status
 not set | Use standard OpenFOAM | available
 
 The second environment variable allows _bunching_ the output from groups of processes. This can be useful for very large numbers of processes. the processes are divided into  bunches, an HDF5 file being created for each time and each bunch.
-if _P_ is the number of processes, _T_ the number of time dumps required, _F_ the number of files for each process and each time dump, _B_ the bunch size, the 
+
+If _P_, _T_, _F_ are the number of processes, of time dumps required, of files for each process and each time dump, respectively, and _B_ is the bunch size, the 
 table below gives the number of files created and applies it to the case _P=10000_, _T=100_, _F=10_, _B=100_
 
 Standard OpenFOAM | HDF5 no bunches | HDF5 with _B_ bunches
@@ -53,12 +54,12 @@ _T_\*_P_\*_F_ | _T_ | _T_\*_P_/_B_
 
 Clearly, using standard OpenFOAM would not be feasiblefor this problem as the number of files created would probably exceed the availble capabilities of the HPC system. Using HDF5 would be possible either with or without bunching.
 
-The environment variable defininfg bunching is:
+The environment variable defining bunching is:
 
-OF_OUTPUT_H5_BUNCHSIZE |  Description | Status
+OF\_OUTPUT_H5\_BUNCHSIZE |  Description | Status
 -------------- | ------------ | ------
 <= 1 | No bunching | available
 \>1 | Use HDF5 bunching with the given size | available
 not defined | no bunching | available
 
-If standard OpenFOAM is used, then theis environment variable is ignored.
+If standard OpenFOAM is used, then this environment variable is ignored.
