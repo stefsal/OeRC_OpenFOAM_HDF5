@@ -20,15 +20,15 @@ contains an example of the option file for some specific system.
 
 ## Update the sources
 
-The directory in stefsal/OeRC_OpenFOAM_HDF5/source contains all the sources required:
+The directory in stefsal/OeRC_OpenFOAM_HDF5/source contains all the sources required.  These must copied (overwrite) in the appropriate location of the src//OpenFoam/db directory as indicated:
 
-* OFstream.H
-* OFstream.C
-* OSstream.H
-* OSstream.C
-* regIOobjectWrite.C
+* OFstream.H  -->   src/OpenFOAM/db/IOstreams/Fstreams/OFstream.H
+* OFstream.C  -->   src/OpenFOAM/db/IOstreams/Fstreams/OFstream.C
+* OSstream.H  -->   src/OpenFOAM/db/IOstreams/Sstreams/OSstream.H
+* OSstream.C  -->   src/OpenFOAM/db/IOstreams/Sstreams/OSstream.C
+* regIOobjectWrite.C  -->   src/OpenFOAM/db/regIOobject/regIOobjectWrite.C
 
-This must copied (overwrite) in the appropriate location of the src//OpenFoam/db directory.
+
 
 All the standard OF scripts can then be used for compilation. 
 
