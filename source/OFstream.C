@@ -396,8 +396,6 @@ Foam::OFstream::~OFstream()
 	 */
 	hsize_t dims1[1];
 	int ndims = dataspace1.getSimpleExtentDims( dims1, NULL);
-	cout << "rank1 " << rank1 << ", dimensions " <<
-          (unsigned long)(dims1[0]) << " x " << std::endl;
 	/*
 	 * Define hyperslab in the dataset; implicitly giving strike and
 	 * block NULL.
@@ -421,8 +419,6 @@ Foam::OFstream::~OFstream()
 	offset_out[0] = 0;
 	count_out[0]  = count[0];
 	memspace.selectHyperslab( H5S_SELECT_SET, count_out, offset_out );
-	cout << "rank1 " << rank1 << ", dimensions " <<
-          (unsigned long)(dimsm[0]) << " x " << std::endl;
 	/*
 	 * Read data from hyperslab in the file into the hyperslab in
 	 * memory and display the data.
@@ -431,7 +427,6 @@ Foam::OFstream::~OFstream()
 	  char * data_out;
 	  data_out = new char[nchar_];
 	dataset_->read( data_out, PredType::C_S1, memspace, dataspace1 );
-	std::cout << "data_out " << data_out << "\n";
 	//	offset_out[0] = offset[0];
 	//count_out[0]  = count[0];
 	
