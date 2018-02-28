@@ -4,7 +4,7 @@
 
 The option file src/OpenFoam/Make/options neeed to be tailored to your particular system.
 
-This is required in order to introduce the apprpriate libraries and include files for
+This is required in order to introduce the approriate libraries and include files for
 
 1. MPI (OpenMPI). Because of OF internal mechanisms (link within the source), these need to be included explicitly.
 1. HDF5 include files and libraries.
@@ -25,10 +25,9 @@ The directory in stefsal/OeRC_OpenFOAM_HDF5/source contains all the sources requ
 * OFstream.H  -->   src/OpenFOAM/db/IOstreams/Fstreams/OFstream.H
 * OFstream.C  -->   src/OpenFOAM/db/IOstreams/Fstreams/OFstream.C
 * OSstream.H  -->   src/OpenFOAM/db/IOstreams/Sstreams/OSstream.H
+* OSstream.H  -->   src/OpenFOAM/db/IOstreams/Sstreams/OSstreamI.H
 * OSstream.C  -->   src/OpenFOAM/db/IOstreams/Sstreams/OSstream.C
 * regIOobjectWrite.C  -->   src/OpenFOAM/db/regIOobject/regIOobjectWrite.C
-
-
 
 All the standard OF scripts can then be used for compilation. 
 
@@ -42,4 +41,17 @@ Please notice that if these are the only changes required and if there are **no*
 
 This will make sure that only the changed contents in db/ will be compiled (of course, with all their dependencies), then the Allwmake command (script) will link the executable.
 
-OpenFOAM is npw ready to use.
+**IMPORTANT**
+Unfortunately, sometimes OpenFOAM put incorrect library addresses (locations) into the folder 
+
+```
+~/OpenFOAM/OpenFOAM-4.1/platforms/<your platform>/src/OpenFOAM/db/options
+```
+
+if that happens, compilation will not succeed.  As that file i created automatically, it is obviously caused by some bug in OpenFOAM.  without going into the OpenFOAM mechanisms, there is little one could do but editing it manually.
+
+Please, do check that, after it is created, it contains the correct addresses of all the libraries 
+needed
+
+
+OpenFOAM is now ready to use.
