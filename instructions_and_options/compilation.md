@@ -41,17 +41,18 @@ Please notice that if these are the only changes required and if there are **no*
 
 This will make sure that only the changed contents in db/ will be compiled (of course, with all their dependencies), then the Allwmake command (script) will link the executable.
 
-**IMPORTANT**
-Unfortunately, sometimes OpenFOAM put incorrect library addresses (locations) into the folder 
+## IMPORTANT: a Potential Problem and its Solution (Workaround)
+Unfortunately, sometimes OpenFOAM put incorrect library addresses (locations) into the file 
 
 ```
 ~/OpenFOAM/OpenFOAM-4.1/platforms/<your platform>/src/OpenFOAM/db/options
 ```
 
-if that happens, compilation will not succeed.  As that file i created automatically, it is obviously caused by some bug in OpenFOAM.  without going into the OpenFOAM mechanisms, there is little one could do but editing it manually.
+if that happens, compilation will not succeed.  As that file is {\em created automatically}, it is obviously caused by some bug in OpenFOAM: without going into them, there is little one could do but editing it manually.
 
-Please, do check that, after it is created, it contains the correct addresses of all the libraries 
-needed
+Please, do check that, after it is created, it contains the correct addresses of all the libraries needed. If it does not, fix it as required.
+
+
 
 
 OpenFOAM is now ready to use.
